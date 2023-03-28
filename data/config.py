@@ -128,6 +128,19 @@ dataset_base = Config({
     'label_map': None
 })
 
+my_custom_dataset = dataset_base.copy({
+    'name': 'My Dataset',
+
+    'train_images': '/kaggle/working/train',
+    'train_info':   '/kaggle/working/train/_annotations.coco.json',
+
+    'valid_images': '/kaggle/working/valid',
+    'valid_info':   '/kaggle/working/valid/_annotations.coco.json',
+
+    'has_gt': True,
+    'class_names': ('khung'),
+})
+
 coco2014_dataset = dataset_base.copy({
     'name': 'COCO 2014',
     
